@@ -25,5 +25,5 @@ actual_text = driver.find_element(By.XPATH, "//div[@data-test='lp-resultsCount']
 assert expected_text in actual_text, f'Error, expected {expected_text} not in actual {actual_text}'
 print('Test case passed')
 
-sleep(5)
+sleep(6)
 driver.quit()
