@@ -7,10 +7,10 @@ from time import sleep
 def open_target(context):
     context.driver.get('https://www.target.com/')
 
-@when('Click on cart icon')
-def click_cart_icon(context):
-    context.driver.find_element(By.XPATH, "//div[@data-test='@web/CartIcon']").click()
-    sleep(5)
+#@when('Click on cart icon')
+#def click_cart_icon(context):
+#    context.driver.find_element(By.XPATH, "//div[@data-test='@web/CartIcon']").click()
+#    sleep(5)
 
 @then('Cart is empty')
 def cart_is_empty(context):
