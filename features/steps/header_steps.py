@@ -17,10 +17,17 @@ def search_product(context, search_word):
     #sleep(5)
     context.app.header.search_product()
 
+@when('Click Sign In')
+def click_sign_in(context):
+    context.app.header.click_sign_in()
+
+@when('Click Sign In from side nav menu')
+def click_side_nav(context):
+    context.app.header.click_side_nav()
 
 @when('Click on Cart icon')
 def click_cart(context):
-    context.driver.find_element(By.CSS_SELECTOR, "[data-test='@web/CartLink']").click()
+    context.app.header.click_cart()
 
 
 @then('Verify header has {number} links')

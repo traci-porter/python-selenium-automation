@@ -8,10 +8,10 @@ SIDE_NAV_ADD_TO_CART_BTN = (By.CSS_SELECTOR, "[data-test='content-wrapper'][id*=
 SEARCH_RESULTS_TXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")
 SIDE_NAV_PRODUCT_NAME = (By.CSS_SELECTOR, "[data-test='content-wrapper']h4")
 
-@when('Click on Add to Cart button')
-def click_add_to_cart(context):
-    context.driver.find_element(*ADD_TO_CART_BTN).click()
-    context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME), message='Product name was not visible')
+#@when('Click on Add to Cart button')
+#def click_add_to_cart(context):
+#    context.driver.find_element(*ADD_TO_CART_BTN).click()
+#    context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME), message='Product name was not visible')
     #   sleep(3)
 
 
