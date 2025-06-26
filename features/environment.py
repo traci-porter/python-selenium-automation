@@ -20,30 +20,30 @@ def browser_init(context, scenario_name):
     # context.driver = webdriver.Safari()
 
     ### HEADLESS MODE ####
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    context.driver = webdriver.Chrome(
-     options=options
-     )
+    #options = webdriver.ChromeOptions()
+    #options.add_argument('headless')
+    #context.driver = webdriver.Chrome(
+    # options=options
+     #)
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user ='traciporter_cm2f0g'
-    bs_key = 'exVjc2Z8v5MpDFuQidp7'
-    url = f'https://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #bs_user ='traciporter_cm2f0g'
+    #bs_key = 'exVjc2Z8v5MpDFuQidp7'
+    #url = f'https://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
 
 
-    bstack_options = {
-     "os" : "Windows",
-     "osVersion" : "11",
-     'browserName': 'Edge',
-     'sessionName': scenario_name,
-     "buildName": "Target Automation Build"
-     }
+    #bstack_options = {
+     #"os" : "Windows",
+     #"osVersion" : "11",
+     #'browserName': 'Edge',
+     #'sessionName': scenario_name,
+     #"buildName": "Target Automation Build"
+     #}
 
-    options = Options()
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    #options = Options()
+    #options.set_capability('bstack:options', bstack_options)
+    #context.driver = webdriver.Remote(command_executor=url, options=options)
 
 
     context.driver.maximize_window()
